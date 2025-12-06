@@ -204,7 +204,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     await send_with_retry(
         update.message.reply_text,
-        "سلام\n\nخوش آمدید\n\nلطفا نام و نام خانوادگی و شماره تلفن خود را ارسال کنید تا آزمون را شروع کنید"
+        "سلام، خوش اومدید 🌸\n\nلطفاً نام کامل و شماره موبایل خود را بفرستید تا آزمون فعال شود. ✅"
     )
     return INITIAL_CONTACT
 
@@ -238,7 +238,7 @@ async def handle_initial_contact(update: Update, context: ContextTypes.DEFAULT_T
     if not phone_match:
         await send_with_retry(
             update.message.reply_text,
-            "لطفا یک شماره موبایل معتبر وارد کنید"
+            "❌لطفا یک شماره موبایل معتبر وارد کنید"
         )
         return INITIAL_CONTACT
     
@@ -285,14 +285,14 @@ async def handle_initial_contact(update: Update, context: ContextTypes.DEFAULT_T
     
     await send_with_retry(
         update.message.reply_text,
-        "نام و شماره شما با موفقیت ثبت شد"
+        "✅نام و شماره شما با موفقیت ثبت شد"
     )
     
     # Ask if ready to start with button
-    keyboard = ReplyKeyboardMarkup([["شروع آزمون"]], one_time_keyboard=True, resize_keyboard=True)
+    keyboard = ReplyKeyboardMarkup([["🚀شروع آزمون"]], one_time_keyboard=True, resize_keyboard=True)
     await send_with_retry(
         update.message.reply_text,
-        "آماده شروع آزمون هستی؟",
+        "✨آماده شروع آزمون هستی؟",
         reply_markup=keyboard
     )
     return INITIAL_CONTACT
@@ -580,12 +580,12 @@ async def end_quiz(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await send_with_retry(
         update.message.reply_text,
-        "آزمون شما با موفقیت ثبت شد"
+        "✅آزمون شما با موفقیت ثبت شد"
     )
 
     await send_with_retry(
         update.message.reply_text,
-        "به زودی کارشناسان خوش زبان با شما تماس خواهند گرفت."
+        "😉به زودی کارشناسان خوش زبان با شما تماس خواهند گرفت."
     )
     
     context.user_data.clear()
