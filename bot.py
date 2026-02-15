@@ -1,5 +1,6 @@
 import os
 import re
+import numpy
 import sqlite3
 from openai import OpenAI
 from telegram import (
