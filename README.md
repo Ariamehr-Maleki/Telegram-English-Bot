@@ -1,4 +1,3 @@
   Telegram English Bot
 
-  AI powered Tests.
-
+  AI powered Tests
