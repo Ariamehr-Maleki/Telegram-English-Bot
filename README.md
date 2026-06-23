@@ -1,3 +1,3 @@
   Telegram English Bot
 
-  AI powered Te
+  AI powered Tel
