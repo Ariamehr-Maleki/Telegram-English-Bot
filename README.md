@@ -1,4 +1,4 @@
   Telegram English Bot
 
-  AI powered Telegram
+  AI powered Telegram Agent
  
